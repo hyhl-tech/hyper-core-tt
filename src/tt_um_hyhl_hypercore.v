@@ -1,3 +1,8 @@
+// ===========================================================================
+// Module   : tt_um_hyhl_hypercore
+// Function : Tiny Tapeout wrapper for Hyper Core RV32I CPU.
+//            Maps TT pins to the CPU: ui_in[0] = reset, uo_out[3:0] = pc[3:0].
+// ===========================================================================
 module tt_um_hyhl_hypercore (
     input  wire [7:0] ui_in,
     output wire [7:0] uo_out,
@@ -12,7 +17,7 @@ module tt_um_hyhl_hypercore (
 
     cpu_top u_cpu (
         .clk(clk),
-        .rst(ui_in[0]),        // ui[0] 做复位，高有效
+        .rst(ui_in[0]),          // ui_in[0] = active-high reset
         .pc_out(pc_out_w),
         .alu_result_out(alu_out_w)
     );
