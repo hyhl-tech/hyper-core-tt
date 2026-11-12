@@ -7,15 +7,10 @@ project:
   language:     "Verilog"
   clock_hz:     0
 
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "2x2"
 
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_hyhl_hypercore"
 
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "tt_um_hyhl_hypercore.v"
     - "cpu_top.v"
@@ -29,9 +24,7 @@ project:
     - "dmem.v"
     - "core_defs.vh"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
-  # Inputs
   ui[0]: "reset (active high)"
   ui[1]: ""
   ui[2]: ""
@@ -41,7 +34,6 @@ pinout:
   ui[6]: ""
   ui[7]: ""
 
-  # Outputs
   uo[0]: "pc_out[0]"
   uo[1]: "pc_out[1]"
   uo[2]: "pc_out[2]"
@@ -51,7 +43,6 @@ pinout:
   uo[6]: ""
   uo[7]: ""
 
-  # Bidirectional pins
   uio[0]: ""
   uio[1]: ""
   uio[2]: ""
@@ -61,9 +52,4 @@ pinout:
   uio[6]: ""
   uio[7]: ""
 
-# Do not change!
-yaml_version: 6
-  uio[7]: ""
-
-# Do not change!
 yaml_version: 6
